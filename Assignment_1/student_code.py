@@ -1,10 +1,42 @@
 from expand import expand
+import heapq
 
-def a_star_search (dis_map, time_map, start, end):
-    ################################################################
-    ###### work in progress ########################################
-    ################################################################
-	pass
+
+def a_star_search(distance_map, time_map, start, goal):
+	def calculate_heuristic(node):
+		return distance_map[node][goal]  # Using distance as heuristic
+
+	open_nodes = [(0, start)]  # Initialize the open nodes list with the starting node and its cost.
+	came_from = {}  # A dictionary to keep track of the parent nodes for each node in the path.
+	g_cost = {node: float('inf') for node in distance_map}  # Initialize the g_cost (cost from start) for each node as infinity.
+	g_cost[start] = 0  # Set the g_cost of the starting node to 0.
+	f_cost = {node: float('inf') for node in distance_map}  # Initialize the f_cost (estimated total cost) for each node as infinity.
+	f_cost[start] = calculate_heuristic(start)  # Set the f_cost of the starting node using the heuristic function.
+
+	while open_nodes:
+		_, current_node = heapq.heappop(open_nodes)  # Pop the node with the lowest f_cost from the open nodes list.
+
+		if current_node == goal:  # If the goal node is reached,
+			path = [current_node]  # Initialize a path with the goal node.
+			while current_node in came_from:
+				current_node = came_from[current_node]  # Backtrack through the parent nodes to reconstruct the path.
+				path.append(current_node)
+			path.reverse()  # Reverse the path to get it from start to goal.
+			return path  # Return the reconstructed path.
+
+		neighbors = expand(current_node, distance_map)  # Expand the current node to get its neighboring nodes.
+
+		for neighbor in neighbors:  # Iterate through the neighboring nodes.
+			if time_map[current_node][neighbor] is not None:  # Check if there is a valid connection between the current node and its neighbor.
+				tentative_g_cost = g_cost[current_node] + time_map[current_node][neighbor]  # Calculate the tentative g_cost for the neighbor.
+				if tentative_g_cost < g_cost[neighbor]:  # If the tentative g_cost is better than the current g_cost for the neighbor,
+					came_from[neighbor] = current_node  # Update the parent node for the neighbor.
+					g_cost[neighbor] = tentative_g_cost  # Update the g_cost for the neighbor.
+					f_cost[neighbor] = g_cost[neighbor] + calculate_heuristic(neighbor)  # Update the f_cost for the neighbor.
+					heapq.heappush(open_nodes, (f_cost[neighbor], neighbor))  # Add the neighbor to the open nodes list with its f_cost.
+
+	return None  # If no path is found and the open nodes list becomes empty, return None.
+	# If no path is found and the open list becomes empty, return None.
 
 def depth_first_search(time_map, start, end):
 	# Initialize the stack with the starting landmark
