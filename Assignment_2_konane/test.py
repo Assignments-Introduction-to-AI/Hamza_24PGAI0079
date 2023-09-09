@@ -31,7 +31,7 @@ class GameTest(unittest.TestCase):
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
 		print(gm.board)
-	# 	# self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
 
 
 	def test1s(self):
@@ -49,7 +49,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
 
 
 	def test2(self):
@@ -63,7 +63,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], [' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o'], ['o', 'x', 'o', 'x']])
 
 
 	def test3(self):
@@ -77,7 +77,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [[' ', 'o', ' ', 'o', ' ', 'o'], [' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', 'x', ' '], ['o', ' ', ' ', 'x', 'o', 'x'], [' ', ' ', 'x', ' ', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [[' ', 'o', ' ', 'o', ' ', 'o'], [' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', 'x', ' '], ['o', ' ', ' ', 'x', 'o', 'x'], [' ', ' ', 'x', ' ', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x']])
 
 
 	def test4(self):
@@ -93,7 +93,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], ['o', ' ', ' ', 'x'], ['x', 'o', 'x', 'o'], ['o', ' ', ' ', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', ' ', 'o'], ['o', ' ', ' ', 'x'], ['x', 'o', 'x', 'o'], ['o', ' ', ' ', 'x']])
 
 
 	def test5(self):
@@ -108,7 +108,7 @@ class GameTest(unittest.TestCase):
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
 		print(gm.board)
-	# # 	self.assertEqual(gm.board, [[' ', 'o', ' ', 'o', ' ', 'o'], [' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', 'x', ' '], ['o', ' ', ' ', 'x', 'o', 'x'], [' ', ' ', 'x', ' ', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [[' ', 'o', ' ', 'o', ' ', 'o'], [' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', 'x', ' '], ['o', ' ', ' ', 'x', 'o', 'x'], [' ', ' ', 'x', ' ', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x']])
 
 
 	def test6(self):
@@ -122,7 +122,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [['x', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], [' ', ' ', ' ', 'x', ' ', ' ', ' ', 'x'], [' ', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], ['o', ' ', ' ', ' ', ' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o', ' ', ' ', ' ', 'o'], ['o', ' ', 'o', ' ', ' ', ' ', 'o', 'x'], ['x', ' ', ' ', 'o', ' ', 'o', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], [' ', ' ', ' ', 'x', ' ', ' ', ' ', 'x'], [' ', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], ['o', ' ', ' ', ' ', ' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o', ' ', ' ', ' ', 'o'], ['o', ' ', 'o', ' ', ' ', ' ', 'o', 'x'], ['x', ' ', ' ', 'o', ' ', 'o', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']])
 
 
 	def test6s(self):
@@ -137,7 +137,7 @@ class GameTest(unittest.TestCase):
 		gm.play()
 		game_rules.printBoard(gm.board)
 		print(gm.GetWinner(), "WINS")
-	# # 	self.assertEqual(gm.board, [['x', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], [' ', ' ', ' ', 'x', ' ', ' ', ' ', 'x'], [' ', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], ['o', ' ', ' ', ' ', ' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o', ' ', ' ', ' ', 'o'], ['o', ' ', 'o', ' ', ' ', ' ', 'o', 'x'], ['x', ' ', ' ', 'o', ' ', 'o', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']])
+		self.assertEqual(gm.board, [['x', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], [' ', ' ', ' ', 'x', ' ', ' ', ' ', 'x'], [' ', ' ', 'x', ' ', 'x', ' ', ' ', 'o'], ['o', ' ', ' ', ' ', ' ', 'x', ' ', 'x'], [' ', 'o', ' ', 'o', ' ', ' ', ' ', 'o'], ['o', ' ', 'o', ' ', ' ', ' ', 'o', 'x'], ['x', ' ', ' ', 'o', ' ', 'o', 'x', 'o'], ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']])
 
 
 if __name__== "__main__":

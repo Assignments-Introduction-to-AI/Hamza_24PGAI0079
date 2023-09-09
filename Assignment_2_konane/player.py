@@ -34,7 +34,10 @@ class MinimaxPlayer(Player):
         self.depth=depth
 
     # Leave these two functions alone.
-    def selectInitialX(self, board): #return (0,0)
+    def selectInitialX(self, board): 
+        self.board = board
+        return (0,0)
+
     # Changes made so that game starts from middle
         validMoves = game_rules.getFirstMovesForX(board)
         return list(validMoves)[0]
